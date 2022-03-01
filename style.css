@@ -1,0 +1,128 @@
+
+
+#upperarea {
+    background-color:#ebeef3; 
+    height:350px;
+    width:100%;
+    position:absolute ;
+    top:0px;
+    left:0px;
+ }
+ 
+ #toptextbg {
+    background-color:#3a5a97; 
+    width:100%;
+    height:45px;
+ }
+ 
+ #facebook {
+    color:#FFFFFF; 
+    font-size:26px;
+    font-weight:bold;
+    position:absolute ;
+    left:122px;
+    top:-18px;
+    
+    z-index:4;
+ }
+ 
+ #iemail {
+    margin-top:18px; 
+    width:94%;
+    height:42px;
+    border:1px solid #CCD0D3;
+    border-radius:6px 6px 0px 0px;
+ }
+ 
+ 
+ #ipassword {
+    width:94%; 
+    height:42px;
+    margin-top:-0.96px;
+    border:1px solid #CCD0D3;
+    border-radius:0px 0px 6px 6px;
+ }
+ 
+ #isubmit {
+    background-color:#4e6597; 
+    width:94%;
+    height:38px;
+    margin-top:16px;
+    border:.8px solid #5c6bc0;
+    border-radius:3.4px;
+    color:#FFFFFF;
+    font-weight:bold;
+    }
+ 
+ #hr1 {
+    width:36%; 
+    margin-top:24px;
+    margin-left :22px;
+ }
+ 
+ #hr2 {
+     width:36%;
+     margin-top:-26px;
+     margin-right:22px;
+     
+ }
+ 
+ #or {
+    margin-top:-18px; 
+ }
+ 
+ #crtnwac {
+    width:48%; 
+    height:36px;
+    background-color:#508C34;
+    margin-top:7.4px;
+    border:0px solid ;
+    color:#FFFFFF;
+    border-radius:4px;
+    font-weight:bold;
+    text-shadow:-0.8px -0.8px #000000;}
+ 
+ #frgtpswrd {
+     color:#86A1C5;
+     margin-left:5px;
+     font-size:12px;
+ }
+ 
+ #lst1 {
+    list-style-type:none ; 
+    float:left;
+    margin-top:45.6px;
+    font-size:16px;
+    font-weight:6px;
+    color:#566886;
+    }
+ 
+ .english {
+     color:#8E9399;
+ }
+ 
+ #lst2 {
+    list-style-type:none ; 
+    float:left ;
+    margin-left:46px;
+    margin-top:45.6px;
+    font-size:16px;
+    color:#566886;
+ }
+ 
+ #copyright {
+    color:#818181;
+    font-size:15px;
+    margin-left:10px;
+    margin-top:15px;
+ }
+ 
+ a{
+    text-decoration:none; 
+    color:#566886;
+ }
+ 
+ 
+ 
+ 
+ 
