@@ -1,0 +1,45 @@
+
+
+body {
+    background:#222;
+    margin:10px;padding:10px;
+    font-family:serif;}
+    
+h1 {
+    margin: 1em;
+    text-align: center;
+    color: #aaa;}
+    
+spam{color:red;}
+
+a{  background:#fff;
+    top:0;right:0;bottom:0;left:0;
+    margin:auto ;}
+    
+.logo-youtube{
+    transition:.3s;
+    height: 130px;width: 200px;
+    background: linear-gradient(red,darkred);
+    margin: 4em auto ;
+    border-top-left-radius: 15% 30%;
+    border-top-right-radius: 15% 30%;
+    border-bottom-left-radius: 15% 30%;
+    border-bottom-right-radius: 15% 30%;
+    position: relative;}
+    
+.logo-youtube:after{
+    content: "";
+    width:0;height:0;
+    position: absolute ;
+    top:0;right:0;
+    bottom:0;left:0;
+    margin:auto ;
+    border-left:50px solid #fff;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+}
+.logo-youtube:hover{
+    
+    height: 135px;
+    width: 205px;
+}
