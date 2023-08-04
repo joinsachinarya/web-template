@@ -11,7 +11,7 @@ const showPostsOnWeb = () => {
         })
         document.body.innerHTML = output;
         console.log("show");
-    }, 2000)
+    }, 1000)
 };
 
 const createPost = (post, callback) => {
@@ -19,7 +19,7 @@ const createPost = (post, callback) => {
         posts.push(post);
         callback();
         console.log("create");
-    }, 4000);
+    }, 2000);
 }
 // showPostsOnWeb();
 createPost({ name: "post three", detail: "this is post three" }, showPostsOnWeb)
