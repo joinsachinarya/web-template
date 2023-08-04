@@ -29,4 +29,4 @@ const create = (post) => {
 }
 create({ name: "third post" })
     .then(show)
-    .catch(err => console.error(err))
+    // .catch(err => console.error(err))
