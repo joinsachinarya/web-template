@@ -1,4 +1,4 @@
-const posts = [{ title: 'POST1' }];
+const posts = [{ title: 'POST1' }, { title: 'POST2' }, { title: 'POST3' }];
 
 
 function updateLastUserActivityTime() {
@@ -35,14 +35,14 @@ function log() {
     })
 }
 
-createPost({ title: "POST2" })
+createPost({ title: "POST4" })
     .then(() => {
         let uTime = updateLastUserActivityTime();
         return uTime;
     }).then((val) => {
         log();
         console.log(val);
+        return deletePost();
+    }).then(() => {
+        log();
     })
-deletePost().then(() => {
-    log()
-})
