@@ -17,16 +17,16 @@ const create = (post) => {
 
         setTimeout(() => {
             posts.push(post);
-            const err = true;
-            if (err) {
-                reject("Error!");
-            } else {
+            const err = false;
+            if (!err) {
                 resolve();
+            } else {
+                reject("Error!");
             }
         }, 2000);
 
     })
 }
-create({ name: "third post" })
-    .then(show)
-    // .catch(err => console.error(err))
+const promise = create({ name: "third post" });  // since our crete function return pormise object
+promise.then(show)
+    .catch(err => console.error(err))
