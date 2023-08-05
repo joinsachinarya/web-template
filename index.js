@@ -35,14 +35,26 @@ function log() {
     })
 }
 
-createPost({ title: "POST4" })
-    .then(() => {
-        let uTime = updateLastUserActivityTime();
-        return uTime;
-    }).then((val) => {
+// createPost({ title: "POST4" })
+//     .then(() => {
+//         let uTime = updateLastUserActivityTime();
+//         return uTime;
+//     }).then((val) => {
+//         log();
+//         console.log(val);
+//         return deletePost();
+//     }).then(() => {
+//         log();
+//     })
+
+const performTask = async function () {
+    try {
+        await createPost({ title: "POST4" })
+        const uTime = await updateLastUserActivityTime();
         log();
-        console.log(val);
-        return deletePost();
-    }).then(() => {
-        log();
-    })
+        console.log(uTime);
+        await deletePost();
+    } catch (error) {
+        console.log(error);
+    }
+}
