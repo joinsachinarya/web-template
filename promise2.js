@@ -78,12 +78,12 @@ function addToCart(item3) {
 
 
 
-// //PROMISE Examples:
-// let url = "https://api.github.com/users/sac6inarya";
-// const res = fetch(url);
-// res.then(function (data) {
-//     console.log(data);
-// })
-//     .catch((err) => {
-//         console.error(err);
-//     })
+//PROMISE Examples:
+let url = "https://api.github.com/users/sac6inarya";
+const res = fetch(url);
+res.then(function (data) {
+    console.log(data);
+})
+    .catch((err) => {
+        console.error(err);
+    })
