@@ -30,9 +30,9 @@ addToCart("item3")
     .then(function (data) {
         return console.log(data);
     })
-// .then(function () {
-//     return showSummery();
-// })
+    .catch((err) => {
+        console.error(err);
+    })
 // .then(function () {
 //     return showSimilarProduct();   // this is called PROMISE CHAINING
 // })
@@ -48,11 +48,14 @@ function addToCart(item3) {
         const orderId = "245678"
         // or got error when failure
         const err = new Error("Something went wrong!")
-        if (orderId) {
-            resolve(orderId);
-        } else {
-            reject(err)
-        }
+
+        setTimeout(() => {
+            if (!orderId) {
+                resolve(orderId);
+            } else {
+                reject(err)
+            }
+        }, 2000);
 
     })
     return myPromise;
