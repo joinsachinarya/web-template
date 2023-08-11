@@ -34,7 +34,7 @@ function addItem(e) {
 
     axios.post("https://crudcrud.com/api/c10f011ed55b4cb090069d5ab5afe066/myItems", obj)
     .then((res) => {
-        loadCurrItems(); // Reload items after adding a new one
+        loadCurrItems();
     })
     .catch((err) => {
         console.error(err);
