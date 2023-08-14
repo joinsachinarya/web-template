@@ -1,0 +1,1 @@
+Logging from new file with node js
