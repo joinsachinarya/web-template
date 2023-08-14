@@ -2,7 +2,7 @@ let form = document.getElementById("form");
 let items = document.getElementById("items-container");
 
 function loadCurrItems() {
-    axios.get("https://crudcrud.com/api/c10f011ed55b4cb090069d5ab5afe066/myItems")
+    axios.get("https://crudcrud.com/api/35c2ccd0fcd64c0c91b8cb3361fe72fb/myItems")
     .then((res) => {
         items.innerHTML = "";
         res.data.forEach(element => {
@@ -32,7 +32,7 @@ function addItem(e) {
         quantity: quantityValue
     };
 
-    axios.post("https://crudcrud.com/api/c10f011ed55b4cb090069d5ab5afe066/myItems", obj)
+    axios.post("https://crudcrud.com/api/35c2ccd0fcd64c0c91b8cb3361fe72fb/myItems", obj)
     .then((res) => {
         loadCurrItems();
     })
@@ -69,13 +69,13 @@ function createBuyButton(id, quantityToBuy) {
 }
 
 function buyItem(id, quantityToBuy) {
-    axios.get(`https://crudcrud.com/api/c10f011ed55b4cb090069d5ab5afe066/myItems/${id}`)
+    axios.get(`https://crudcrud.com/api/35c2ccd0fcd64c0c91b8cb3361fe72fb/myItems/${id}`)
     .then((res) => {
 
         let quantity = res.data.quantity;
         updatedQuantity = quantity - quantityToBuy;
 
-        axios.put(`https://crudcrud.com/api/c10f011ed55b4cb090069d5ab5afe066/myItems/${id}`, {
+        axios.put(`https://crudcrud.com/api/35c2ccd0fcd64c0c91b8cb3361fe72fb/myItems/${id}`, {
             name:res.data.name,
             description:res.data.description,
             price:res.data.price,

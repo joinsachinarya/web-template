@@ -8,18 +8,17 @@
     <title>Document</title>
 </head>
 
-<body>
 
-    <form id="form" class="container">
-        <label for="item-name">Item name: </label>
-        <input type="text" id="item-name" name="item-name">
+    <form id="form" class="container-fluid bg-secondary p-4">
+        <label for="item-name" >Item name: </label>
+        <input  type="text" id="item-name" name="item-name">
         <label for="description">Description: </label>
-        <input type="text" id="description" name="description">
+        <input  type="text" id="description" name="description">
         <label for="price">Price : </label>
-        <input type="number" name="price" id="price">
+        <input  type="number" name="price" id="price">
         <label for="quantity">Quantity : </label>
-        <input type="number" name="quantity" id="quantity">
-        <button type="submit" onclick="addItem">Add</button>
+        <input  type="number" name="quantity" id="quantity">
+        <button type="submit" onclick="addItem" class="btn btn-warning">Add</button>
     </form>
 
     <div id="container">
