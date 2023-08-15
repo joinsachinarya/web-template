@@ -1,5 +1,10 @@
-console.log("a");
-console.log("b");
+function a() {
+  console.log("a");
+}
+function b() {
+  console.log("b");
+}
+
 function c() {
   setTimeout(() => {
     console.log("c");
@@ -17,4 +22,7 @@ function c() {
     d();
   }, 2000);
 }
+
+a();
+b();
 c();
