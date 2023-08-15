@@ -6,10 +6,11 @@ const server = http.createServer((req, res) => {
   let method = req.method;
 
   if (url === "/") {
+    let textFileMessage = fs.readFileSync("message.txt", "utf-8");
     res.write("<html>");
     res.write("<head><title>Message</title></head>");
     res.write(
-      "<body><form action='/message' method='POST'> <input type='text' name='myMessage' placeholder='message'> <button type='submit'>Send</button> </form></body>"
+      `<body><form action='/message' method='POST'>   <h4>${textFileMessage}</h4>   <input type='text' name='myMessage' placeholder='message'> <button type='submit'>Send</button> </form></body>`
     );
     res.write("</html>");
     return res.end();
