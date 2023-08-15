@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "custom-start": "node index.js"
+    "start": "nodemon index.js",
+    "custom-start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sac6inarya/web-template/issues"
   },
-  "homepage": "https://github.com/sac6inarya/web-template#readme"
+  "homepage": "https://github.com/sac6inarya/web-template#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
