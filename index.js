@@ -18,8 +18,6 @@
 // //     }
 // // }
 
-
-
 // // this with arrow function
 // class Student{
 //     constructor(name, age, marks){
@@ -39,7 +37,6 @@
 //         }
 //     }
 // }
-
 
 // // // this with arrow function :: this does not create it's own context instead it find the value of this from it's lexical parent
 // // class Student{
@@ -67,14 +64,27 @@
 // const sachin = new Student("sachin", 20, 50);
 // sachin.isReadyForPlacement(16)(33);
 
+// function myFun(){
+//     console.log(arguments);
+// }
+// myFun(1,2,3)
 
+// (()=>{
+//     console.log(arguments);
+// })()
 
-function myFun(){
-    console.log(arguments);
+function sum(a, b) {
+  return (a += b);
 }
-myFun(1,2,3)
 
-(()=>{
-    console.log(arguments);
-})()
+console.log(sum(6, 5)); //11
+console.log(sum(6, 5)); //11
+console.log(sum(6, 5)); //11
 
+let a = 6;
+function sum2(b) {
+  return (a += b);
+}
+console.log(sum2(5)); //11
+console.log(sum2(5)); //16
+console.log(sum2(5)); //21
