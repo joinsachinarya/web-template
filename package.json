@@ -1,0 +1,21 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "HTML, CSS, JS template for dummy projects and exercises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "custom-start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sac6inarya/web-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sac6inarya/web-template/issues"
+  },
+  "homepage": "https://github.com/sac6inarya/web-template#readme"
+}
