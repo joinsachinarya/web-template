@@ -5,6 +5,14 @@ function c() {
     console.log("c");
     function d() {
       console.log("d");
+      function e() {
+        console.log("e");
+        function f() {
+          console.log("f");
+        }
+        f();
+      }
+      e();
     }
     d();
   }, 2000);
