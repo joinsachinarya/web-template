@@ -7,6 +7,7 @@ app.use((req, res, next) => {
 });
 app.use((req, res, next) => {
   console.log("Logging inside anohter middleware");
+  res.send("<h2>Hello from express JS</h2>");
 });
 
 app.listen(4000, () => {
