@@ -1,13 +1,26 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
 
-app.use((req, res, next) => {
-  console.log("Logging inside a middleware");
-  next();
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get("/add-product", (req, res) => {
+  res.send(`
+    <form method="POST" action="/product">
+      <input type="text" placeholder="item name" name="item">
+      <input type="number" placeholder="size" name="size">
+      <button type="submit">Send</button>
+    </form>
+  `);
 });
-app.use((req, res, next) => {
-  console.log("Logging inside anohter middleware");
-  res.send("<h2>Hello from express JS</h2>");
+
+app.post("/product", (req, res) => {
+  const itemName = req.body.item;
+  const itemSize = req.body.size;
+  console.log("Item Name:", itemName);
+  console.log("Item Size:", itemSize);
+  res.send("Product added successfully!"); // You can send a response here
 });
 
 app.listen(4000, () => {
