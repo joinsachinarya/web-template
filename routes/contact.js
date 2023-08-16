@@ -6,7 +6,7 @@ router.get("/contact", (req, res) => {
   res.sendFile(path.join(__dirname, "../", "views", "contact.html"));
 });
 
-router.get("/success", (req, res) => {
+router.post("/success", (req, res) => {
   res.send("<h2>Form successfuly filled</h2>");
 });
 
