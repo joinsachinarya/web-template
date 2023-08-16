@@ -43,6 +43,41 @@
       main {
         padding: 1rem;
       }
+
+      .contact-form {
+        width: 20rem;
+        max-width: 90%;
+        margin: auto;
+      }
+      .form-control {
+        font: inherit;
+        margin: 1rem 0;
+      }
+      .form-control label,
+      .form-control input {
+        display: block;
+        width: 100%;
+      }
+      .form-control input {
+        border: 1px solid rgb(240, 220, 68);
+        border-radius: 2px;
+        padding: 4px 0;
+        font: inherit;
+      }
+      button {
+        font: inherit;
+        border-radius: 2px;
+        border: 1px solid #5d39ec;
+        color: #5d39ec;
+        background: white;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+      button:hover,
+      button:active {
+        background-color: #5d39ec;
+        color: white;
+      }
     </style>
 
     <title>Contact Us</title>
@@ -65,8 +100,12 @@
     </header>
     <main>
       <form action="/success" method="post" class="contact-form">
-        <input type="text" name="name" id="name" placeholder="Enter name" />
-        <input type="email" name="email" id="email" placeholder="Enter email" />
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
         <button type="submit">Contact</button>
       </form>
     </main>
