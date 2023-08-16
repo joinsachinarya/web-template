@@ -2,25 +2,28 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/add-product", (req, res) => {
-  res.send(`
-    <form method="POST" action="/product">
-      <input type="text" placeholder="item name" name="item">
-      <input type="number" placeholder="size" name="size">
-      <button type="submit">Send</button>
-    </form>
-  `);
+app.use("/", (req, res, next) => {
+  console.log("This middleware always runs");
+  next();
 });
 
-app.post("/product", (req, res) => {
-  const itemName = req.body.item;
-  const itemSize = req.body.size;
-  console.log("Item Name:", itemName);
-  console.log("Item Size:", itemSize);
-  res.send("Product added successfully!"); // You can send a response here
+app.get("/", (req, res) => {
+  res.send("<h2>This is home page</h2>");
+});
+
+app.get("/add-product", (req, res, next) => {
+  console.log("Add product page");
+  res.send(
+    `<form method="POST" action="/products"><input type="text" name="item" placeholder="Item name"><input type="number" name="size" placeholder="Item size"><button type="submit">Send</button></form>`
+  );
+});
+
+app.post("/products", (req, res, next) => {
+  console.log("Name: ", req.body.item);
+  console.log("Size: ", req.body.size);
+  res.redirect("/");
 });
 
 app.listen(4000, () => {
