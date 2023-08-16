@@ -8,6 +8,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(adminRoutes);
 app.use(shopRoutes);
+app.use("*", (req, res, next) => {
+  res.status(404).send("<h2>We are lost : Error 404!</h2>");
+});
 
 app.listen(4000, () => {
   console.log("Server is listening on port 4000!");
