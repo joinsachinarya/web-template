@@ -2,6 +2,7 @@ const express = require("express");
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 
@@ -10,7 +11,7 @@ app.use("/admin", adminRoutes);
 app.use("/shop", shopRoutes);
 
 app.use("*", (req, res, next) => {
-  res.status(404).send("<h2>We are lost : Error 404!</h2>");
+  res.status(404).sendFile(path.join(__dirname, "views", "404page.html"));
 });
 
 app.listen(4000, () => {
