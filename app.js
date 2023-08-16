@@ -6,8 +6,9 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(adminRoutes);
-app.use(shopRoutes);
+app.use("/admin", adminRoutes);
+app.use("/shop", shopRoutes);
+
 app.use("*", (req, res, next) => {
   res.status(404).send("<h2>We are lost : Error 404!</h2>");
 });
