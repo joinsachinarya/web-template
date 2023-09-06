@@ -10,10 +10,6 @@ app.use(cors());
 app.use(express.json());
 app.use(homeRoutes);
 
-app.use((req, res) => {
-  res.json("Hey from last middleware");
-});
-
 sequelize
   //   .sync({ force: true })
   .sync()

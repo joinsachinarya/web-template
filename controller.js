@@ -30,8 +30,8 @@ exports.getUsers = (req, res, next) => {
 };
 
 exports.deletUser = (req, res, next) => {
-  // let id = req.params.id;
-  User.findByPk(1)
+  let id = req.params.id;
+  User.findByPk(id)
     .then((result) => {
       if (!result) {
         res.status(404).json("User not found");
@@ -47,17 +47,18 @@ exports.deletUser = (req, res, next) => {
 };
 
 exports.editUser = (req, res, next) => {
-  // const updatedValues = {
-  //   name: req.body.name,
-  //   age: req.body.age,
-  // };
-  // let id = req.params.id;
-  User.findByPk(1)
+  const updatedValues = {
+    name: req.body.name,
+    age: req.body.age,
+  };
+  let id = req.params.id;
+  console.log(id, updatedValues);
+  User.findByPk(id)
     .then((result) => {
       if (!result) {
         res.json(404).json("User not found");
       }
-      return result.update("updatedValues");
+      return result.update(updatedValues);
     })
     .then((result) => {
       res.json(result);
