@@ -3,11 +3,9 @@ const p = new Promise((resolve, reject) => {
 });
 
 async function fun() {
-  // return p;
-  return "Direct value!";
+  // let data = p.then((res) => console.log(res)); // Promise resloved using .then /.catch
+  // return data;
+  let data = await p; // Promise resolved using async, await
+  console.log(data);
 }
-let data = fun();
-
-data.then((result) => {
-  console.log(result);
-});
+fun();
