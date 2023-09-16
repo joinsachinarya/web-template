@@ -1,11 +1,18 @@
 const p = new Promise((resolve, reject) => {
-  resolve("Promise resolved value!");
+  setTimeout(() => {
+    resolve("Promise resolved value!");
+  }, 2000);
 });
 
 async function fun() {
-  // let data = p.then((res) => console.log(res)); // Promise resloved using .then /.catch
-  // return data;
-  let data = await p; // Promise resolved using async, await
-  console.log(data);
+  // JS engine will not wait for promise to be resloved
+  let data = p.then((res) => console.log(res)); // Promise resloved using .then /.catch
+  console.log("Hye");
+  return data;
+
+  // //JS engine will wait for promise to be resolved
+  // let data = await p; // Promise resolved using async, await
+  // console.log("HYE");
+  // console.log(data);
 }
 fun();
